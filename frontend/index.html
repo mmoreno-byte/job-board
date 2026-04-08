@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board - Filtrador de Trabajos TI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Job Board TI</h1>
+        <p>Encuentra tu próximo trabajo en informática</p>
+    </header>
+
+    <main>
+        <section class="filters">
+            <div class="filter-group">
+                <label for="keywords">Buscar</label>
+                <input type="text" id="keywords" placeholder="Python, React, Full Stack...">
+            </div>
+
+            <div class="filter-group">
+                <label for="location">Ubicación</label>
+                <select id="location">
+                    <option value="">Todas</option>
+                    <option value="Remote">Remoto</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="jobType">Tipo</label>
+                <select id="jobType">
+                    <option value="">Todos</option>
+                    <option value="remote">Remoto</option>
+                    <option value="hybrid">Híbrido</option>
+                    <option value="on-site">Presencial</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="technology">Tecnología</label>
+                <select id="technology">
+                    <option value="">Todas</option>
+                </select>
+            </div>
+
+            <button id="searchBtn">Buscar</button>
+        </section>
+
+        <section class="results">
+            <div class="results-header">
+                <span id="resultsCount">0 resultados</span>
+            </div>
+            <div id="jobsList" class="jobs-list"></div>
+            <div id="loading" class="loading hidden">Cargando...</div>
+            <div id="error" class="error hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>API proporcionada por Jooble - Datos reales de empleo</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
